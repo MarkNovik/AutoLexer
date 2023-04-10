@@ -12,7 +12,9 @@ sealed interface Token
 
 @JvmInline value class Unparsed(val value: String): Token
 
-data class Parsed(
+class Parsed(
     val name: String,
     val value: Any
-) : Token
+) : Token {
+    override fun toString(): String = "$name($value)"
+}

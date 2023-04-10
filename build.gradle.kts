@@ -22,6 +22,7 @@ tasks.test {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         jvmTarget = "17"
+        freeCompilerArgs = listOf("-Xcontext-receivers")
         languageVersion = "2.0"
     }
 }
